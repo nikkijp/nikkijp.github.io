@@ -1,0 +1,324 @@
+<!DOCTYPE HTML>
+<html lang="zh">
+  <head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<link rel="icon" href="favicon.ico" type="image/x-icon" />
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>ミラクルニキ中日对照配装工具ฅ(๑´ㅂ`๑)ฅ</title>
+		<link rel="stylesheet" href="bootstrap/bootstrap.min.css">
+		<link rel="stylesheet" href="onekeystrategy.css">
+		<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" type="text/css" href="ui.css">
+		<link rel="stylesheet" type="text/css" href="mobileui.css" media="only screen and (max-width: 650px)">
+		<script type='text/javascript' charset="UTF-8" src='data/notice.js'></script>
+		<script type='text/javascript' charset="UTF-8" src='jquery.js'></script>
+		<script type='text/javascript' charset="UTF-8" src='jquery.freezeheader.js'></script>
+		<script type='text/javascript' charset="UTF-8" src="bootstrap/bootstrap.min.js"></script>
+		<script type='text/javascript' charset="UTF-8" src="tool.js"></script>
+		<script type='text/javascript' charset="UTF-8" src='data/wardrobe.js'></script>
+		<script type='text/javascript' charset="UTF-8" src='scoring.js'></script>
+		<script type='text/javascript' charset="UTF-8" src='data/levels.js'></script>
+		<script type='text/javascript' charset="UTF-8" src='data/flist.js'></script>
+		<script type='text/javascript' charset="UTF-8" src='model.js'></script>
+		<script type='text/javascript' charset="UTF-8" src='data/pattern.js'></script>
+		<script type='text/javascript' charset="UTF-8" src='onekeystrategy_lan.js'></script>
+		<script type='text/javascript' charset="UTF-8" src='onekeystrategy.js'></script>
+		<script type='text/javascript' charset="UTF-8" src='ui.js'></script>
+		<script type='text/javascript' charset="UTF-8" src='nikki.js'></script>
+		<script type='text/javascript' charset="UTF-8" src='clock.js'></script>
+		<script type='text/javascript' charset="UTF-8" src='sharewardrobe.js'></script>
+    
+  </head>
+  <body>
+		<div class='title'>
+			奇迹暖暖在线工具 by <a href="http://weibo.com/u/3597140883">@黑的升华</a>   modified from
+			<a href="http://ivangift.github.io/nikkiup2u3/"> ivangift's github</a><br/>
+			<div class="" role="alert">国内镜像访问地址<a href="http://seal.coding.me/qjnn">seal.coding.me/qjnn</a>, 原地址<a href="http://seal100x.github.io/nikkiup2u3/">seal100x.github.io/nikkiup2u3</a></div>
+			衣柜、设计图更新：by 翡翠<br/>
+			关卡信息更新：by 兔子<br/>
+            日服衣柜更新：by moRei猫猫<br/>
+			友情链接：台服版本<a href="http://nikkitw.github.io/nikkitw">nikkitw.github.io/nikkitw</a><br/>台日对照版本<a href="https://nikkijap.github.io/nikkijp/">nikkijp.github.io/nikkijp</a><br/>
+			<!--<div class="alert alert-danger">请使用国内镜像(qjnn.gift)访问配装器的小伙伴们注意, 此域名因到期, 请及时将自己的衣柜转移到上边新的国内镜像地址</div>-->
+			<div id="share-link"></div>
+		</div>
+		<div id="StrategyInfo"></div>
+		<div class='top'>
+			<div class="announcement">
+				<div id="update_history">
+					2017.04.25 测试使用<br/>
+                    2017.04.26 继续测试<br/>
+                    2017.04.27 上线测试<br/>
+                    2017.04.30 更新【鲤のぼり】（鲤鱼旗）活动服装数据<br/>
+                    2017.05.10 更新【花蔓定制】【心月狐】【亢金龙】服装数据<br/>
+				    2017.05.11-17 更新【满天繁星】活动关卡<br/>
+                    2017.5.21 更新服装数据<br/>
+					2017.5.21 更新废墟二选一服装数据<br/>
+					2017.5.26 修正部分服装名字<br/>
+					2017.5.31 新增婚纱活动关卡及服装数据<br/>
+                    2017.6.14 新增联盟四章及新增服装数据<br/>
+                    2017.6.16 添加一些F品，如发现联盟和关卡有F品请务必反馈上报，非常感谢！<br/>
+                    2017.6.23 新增音乐会活动关卡及新增服装数据<br/>
+                    2017.07.01 新增七夕活动关卡数据已经新增服装数据<br/>
+					2017.07.07 更新十章数据以及新增服装数据<br/>
+                    2017.07.11 更新赠送套装以及充值套装数据<br/>
+				    2017.07.12 更新『星空柄の浴衣』以及『屋台のお手伝い』数据<br/>
+                    2017.07.19 更新花火活动排位赛服装数据<br/>
+					2017.07.22 更新二选一及120円充值服装数据<br/>
+                    2017.08.01 更新活动新增服装数据<br/>
+					2017.08.11 更新活动及充值新增服装数据<br/>
+					2017.08.18 更新活动新增服装数据<br/>
+					2017.08.23 补充缺失的服装数据<br/>
+                  2017.08.25 新增活动服装（樱桃青春套）数据<br/>
+					2017.08.31 新增『精霊の森』关卡属性，新服装数据<br/>
+					2017.09.07 新增11章关卡数据，更新服装数据<br/>
+					2017.09.10 新增部分服装数据<br/>
+					2017.09.11 新增部分活动服装数据<br/>
+					2017.09.18 新增排位活动服装数据<br/>
+					2017.09.21 新增『偽りの鳥籠』【鹦鹉公主】以及【战斗爱丽丝】服装数据<br/>
+					2017.09.28 更新联盟5章以及新增服装数据<br/>
+					2017.09.28 更新繁星活动关卡数据（国服数据）以及新增服装数据<br/>
+					2017.09.29 新增节日限定充值散件数据，修正某些服装名字<br/>
+					2017.10.03更新修正了部分服装的获取方式<br/>
+					2017.10.08 新增活动关卡数据以及新服装数据<br/>
+					2017.10.17 新增【黑蔷薇舞会】关卡数据（数据来自国服活动，未知日服是否会改变，仅供参考）<br/>
+                  2017.10.19 更新【黑蔷薇舞会】关卡数据，新增活动服装数据<br/>
+					2017.10.26 更新12章关卡数据，更新新增服装数据<br/>
+					2017.10.28 更新永夜国活动关卡数据，更新新增服装数据<br/>
+					2017.11.07 更新活动及充值服装数据<br/>
+					2017.11.18 更新活动及充值服装数据，关卡数据未录入（因作用不大），如有需要可私信<br/>
+					2017.11.21 新增120円充值服装数据<br/>
+					2017.12.07 新增生日套装数据<br/>
+					2017.12.01 更新婚纱活动数据及13章关卡数据；新增服装数据；福袋数据已录入更新。<br/>
+					2017.12.08 新增限时抽阁服装数据。<br/>
+					2017.12.01 因更新数据较多，如果发现有错漏请第一时间通知我，非常感谢~<br/>
+					2017.12.20 新增活动服装数据以及福袋服装数据<br/>
+					2017.12.27 更新联盟6章数据以及新增服装数据，更新复刻服装获取途径。<br/>
+					2017.12.29 更新繁星三期活动数据（国服数据，供参考），更新繁星活动服装数据。<br/>
+					2017.12.30 更新充值套装数据。<br/>
+                  2018.01.09 更新新增服装数据。<br/>
+					2018.01.09 已收录小邮件限时登录赠送的服饰数据。<br/>
+					2018.01.20 更新『雪の舞踏会』活动关卡数据以及新增服装数据。<br/>
+					2018.01.30 更新『極限のレース』活动关卡数据以及新增服装数据。<br/>
+					2018.02.01 更新『日替りBOX』新增服装数据。<br/>
+                  2018.02.09 更新溜冰套、翻糖套、爱神套以及婚纱两套新服装数据。婚纱活动数据等活动开放后更新。<br/>
+					2018.02.10 更新情人节套装数据，新增14及15月签到服装数据，更新某些服装来源。<br/>
+					2018.02.11 更新婚纱活动关卡数据。<br/>	
+					2018.02.13 更新修正婚纱活动关卡数据（官方改数据后）。<br/><b>注意【一定要手动过关】，一键过关是默认最高分的搭配，也就是旧攻略的搭配，新关卡分数基本不可能超过旧关卡，所以不能用一键过关了，请千万注意！</b><br/>
+					2018.02.20 更新活动套装数据。<br/>
+					2018.02.24 新增补偿登录送「ハニーサンシャイン」（甜蜜阳光）套装数据。<br/>
+					2018.02.27 更新14章关卡数据，服装数据稍后更新。<br/>
+				    2018.02.28 更新新增服装数据。<br/>
+					2018.03.12 更新HipHop活动数据，更新服装数据。<br/>
+                  2018.03.08 更新14-1 F服装数据，更新排位套装MIRACLE★Vocal服装数据。<br/>
+				  2018.03.22 更新『ルインの歌姫』活动数据以及新增服装数据。<br/>
+				  2018.04.01 更新活动服装数据以及新增服装数据。<br/>
+				  2018.04.08 更新活动服装数据。<br/>
+				  2018.04.16 更新新增服装数据。<br/>
+				  2018.04.21 更新活动关卡数据，更新新增服装数据。<br/>
+				  2018.04.27 更新15章关卡数据，更新新增服装数据。<br/>
+				  2018.04.28 更新新增活动套装数据。<br/>
+				  2018.05.01 更新端午活动关卡数据，更新新增服装数据。<br/>
+				  2018.05.02 更新端午活动关卡数据，当日主题改为日服名字表示已查正。<br/>
+				  2018.05.11 更新新增服装数据和活动关卡数据。<br/>
+				  2018.05.19 更新『道化師とダイヤの仮面』活动关卡数据和新增服装数。<br/>
+				  2018.05.30 更新『愛の誓い』活动关卡数据，新增服装录入中还未更新。<br/>
+				  2018.06.09 更新套装『真昼の夢想家』『狐の嫁入り』『審判シエル』以及累计充值散件服装数据。<br/>
+				  2018.06.19 更新活动关卡数据，更新套装『誠意の剣気』『千雪の欠片』『ティーカップウサギ』以及登录送散件服装数据。<br/>
+				  2018.06.29 更新16章关卡数据，更新新章服装数据，更新活动套装服装数据。<br/>
+				  2018.07.02 更新七夕活动关卡数据（后面未改标题关卡为国服数据，仅供参考），更新活动服装数据。<br/>
+                2018.07.06 已更新今日七夕活动关卡数据。<br/>
+				  2018.07.10 更新活动服装数据以及限时充值套装数据。<br/>
+				  2018.07.20 更新新增服装数据以及更新复刻服装获取方式。<br/>
+				  2018.07.22 更新『夜闇の古城』活动关卡数据（每日更新），新增『クラウディア7.8.0.』『暗黒童話』『永遠の花』服装数据以及萤光之灵相关数据。<br/>
+				  2018.07.28 更新今日活动关卡【最後の宝物庫】数据。<br/>
+				</div>
+					
+					公告：<br/>
+					2018.08.01 更新『愛の誓い復刻』活动关卡数据，新增『金石の影』『砂漠の美』『星のセレナーデ』服装数据。<br/>
+					2018.08.01 修改测试Test。<br/>
+					<br/>
+					<b>【本次更新服装较多，某些暂无法获取的数据未录入，另外官方也有可能会修改往期服饰名字，如发现错漏请联系我，谢谢~】</b><br/>
+					
+					--------------------------------------------------------------  <br/>
+					1.此配装工具为日服暖暖专用，第一次使用请先阅读【配装器使用介绍】<br/>2.新手、过关党请多看过关提示，无视“新外套可用”这类说明。<br/>3.如果发现日服专属衣服在某关卡会F，欢迎上报！<br/>
+                    4.如发现任何错误或者bug，请联系<a href="http://weibo.com/moreibaking?is_all=1">微博反馈</a><hr/>
+					特别感谢：<b>傲娇攻略组</b> & <b>点点</b> &  <b>Flower 花音</b><br/>
+					<a href="#" id="show_history">查看历史更新</a><br/><br/>
+			</div><!-- announcement -->	
+			<div class="fliter">
+				距离搭配赛结束还有<span id="showTime">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+				&nbsp;&nbsp;|&nbsp;&nbsp;
+				<a href="biguse.html" target="_blank">梦幻大使对比工具</a>
+				&nbsp;&nbsp;|&nbsp;&nbsp;
+				<a href="introduce.html" target="_blank">配装器使用介绍(临时版, 图多慎点)</a>
+				&nbsp;&nbsp;|&nbsp;&nbsp;
+				<a href="data/FAQ.html" target="_blank">常见问题FAQ</a>
+				&nbsp;&nbsp;|&nbsp;&nbsp;
+				<a href="wardrobechk.html" target="_blank">游戏衣柜对比</a>
+				<button style="display:none" class="btn btn-sm btn-default" id="sharewardrobe">分享衣柜</button>&nbsp;&nbsp;|&nbsp;&nbsp;
+				<button style="display:none" class="btn btn-sm btn-default" id="aaa" onclick="getWardrobe()">同步分享的衣柜</button>
+				<br/>
+				<div id='filtersTop'>
+					<div class="btn-group">
+						<select id="theme-fliter" onChange="reDrawTheme()" class="btn btn-default"></select>
+						<select id="theme" onChange="changeTheme()" class="btn btn-default"></select>
+						<button id="onekey" class="btn btn-default">一键攻略</button>
+					</div>
+					<div id="tagInfo"></div>
+					<div id="skillInfo"></div>
+					<div id="categoryFInfo"></div>
+					<div id="hintInfo"></div>
+				</div>
+				<div class="fliter_form_div">
+					<form name="filter_form" class="form-inline">
+						<div class="fliter_form_div_left">
+							<div class='facet'>
+								<div class="weightContainer" role="group" data-toggle="buttons">
+									<label class="btn btn-sm btn-default"><input class="filter-radio" type="radio" name="simple" value="1"/> 简约</label>
+									<label class="btn btn-sm btn-default"><input class="filter-radio" type="radio" name="simple" value="-1"/> 华丽</label>
+									<input class="btn-sm" placeholder="权重" type="text" id="simpleWeight" name="simpleWeight" value="1" onChange="changeFilter()" />
+									<span class="highscore-link btn-sm 1d778" id="simple1d778">微笑+飞吻</span>
+									<span class="highscore-link btn-sm 1d27" id="simple1d27">微笑</span>
+									<span class="highscore-rank btn-sm" id="simplerank"></span>
+								</div>
+								<div class="weightContainer" role="group" data-toggle="buttons">
+									<label class="btn btn-sm btn-default"><input class="filter-radio" type="radio" name="cute" value="1"/> 可爱</label>
+									<label class="btn btn-sm btn-default"><input class="filter-radio" type="radio" name="cute" value="-1"/> 成熟</label>
+									<input class="btn-sm" placeholder="权重" type="text" id="cuteWeight" name="cuteWeight" value="1" onChange="changeFilter()" />
+									<span class="highscore-link btn-sm 1d778" id="cute1d778">微笑+飞吻</span>
+									<span class="highscore-link btn-sm 1d27" id="cute1d27">微笑</span>
+									<span class="highscore-rank btn-sm" id="cuterank"></span>
+								</div>
+								<div class="weightContainer" role="group" data-toggle="buttons">
+									<label class="btn btn-sm btn-default"><input class="filter-radio" type="radio" name="active" value="1"/> 活泼</label>
+									<label class="btn btn-sm btn-default"><input class="filter-radio" type="radio" name="active" value="-1"/> 优雅</label>
+									<input class="btn-sm" placeholder="权重" type="text" id="activeWeight" name="activeWeight" value="1" onChange="changeFilter()" />
+									<span class="highscore-link btn-sm 1d778" id="active1d778">微笑+飞吻</span>
+									<span class="highscore-link btn-sm 1d27" id="active1d27">微笑</span>
+									<span class="highscore-rank btn-sm" id="activerank"></span>
+								</div>
+								<div class="weightContainer" role="group" data-toggle="buttons">
+									<label class="btn btn-sm btn-default"><input class="filter-radio" type="radio" name="pure" value="1"/> 清纯</label>
+									<label class="btn btn-sm btn-default"><input class="filter-radio" type="radio" name="pure" value="-1"/> 性感</label>
+									<input class="btn-sm" placeholder="权重" type="text" id="pureWeight" name="pureWeight" value="1" onChange="changeFilter()" />
+									<span class="highscore-link btn-sm 1d778" id="pure1d778">微笑+飞吻</span>
+									<span class="highscore-link btn-sm 1d27" id="pure1d27">微笑</span>
+									<span class="highscore-rank btn-sm" id="purerank"></span>
+								</div>
+								<div class="weightContainer" role="group" data-toggle="buttons">
+									<label class="btn btn-sm btn-default"><input class="filter-radio" type="radio" name="cool" value="1"/> 清凉</label>
+									<label class="btn btn-sm btn-default"><input class="filter-radio" type="radio" name="cool" value="-1"/> 保暖</label>
+									<input class="btn-sm" placeholder="权重" type="text" id="coolWeight" name="coolWeight" value="1" onChange="changeFilter()" />
+									<span class="highscore-link btn-sm 1d778" id="cool1d778">微笑+飞吻</span>
+									<span class="highscore-link btn-sm 1d27" id="cool1d27">微笑</span>
+									<span class="highscore-rank btn-sm" id="coolrank"></span>
+								</div>
+								<div class='weightContainer' id = "tag1Container" role="group" data-toggle="buttons">
+									<input class="btn-sm" placeholder="tag1" type="text" id="tag1" name="tag1" onChange="changeFilter()" />
+									<label class="btn btn-sm btn-default active"><input class="filter-radio" type="radio" name="tag1method" value="add" checked/> 加分</label>
+									<label class="btn btn-sm btn-default"><input class="filter-radio" type="radio" name="tag1method" value="replace"/> 替换</label>
+									<select class="btn-sm" id="tag1base" onChange="changeFilter()">
+										<option>SS</option>
+										<option>S</option>
+										<option>A</option>
+										<option>B</option>
+										<option>C</option>
+									</select>
+									<input class="btn-sm" type="text" id="tag1weight" name="tag1weight" value="1" onChange="changeFilter()" />
+								</div>
+								<div class='weightContainer' id = "tag2Container" role="group" data-toggle="buttons">
+									<input class="btn-sm" placeholder="tag2" type="text" id="tag2" name="tag2" onChange="changeFilter()" />
+									<label class="btn btn-sm btn-default active"><input class="filter-radio" type="radio" name="tag2method" value="add" checked/> 加分</label>
+									<label class="btn btn-sm btn-default"><input class="filter-radio" type="radio" name="tag2method" value="replace"/> 替换</label>
+									<select class="btn-sm" id="tag2base" onChange="changeFilter()">
+										<option>SS</option>
+										<option>S</option>
+										<option>A</option>
+										<option>B</option>
+										<option>C</option>
+									</select>
+									<input class="btn-sm" type="text" id="tag2weight" name="tag2weight" value="1" onChange="changeFilter()" />
+								</div>
+							</div><!-- facet -->
+							<div class="fliter_option clear">
+								<div class="checkbox"><label><input type="checkbox" class="fliter" value="own" checked /> 拥有<span id='inventoryCount'/></label></div>
+								<div class="checkbox"><label><input type="checkbox" class="fliter" value="missing" checked /> 没有</label></div>
+								<div class="checkbox"><label><input type="checkbox" id="searchResultCheck" onclick="toggleSearchResult()" checked /> 搜索</label></div>
+								<a href="#" class = "showmore" style="display:inline-block;cursor:pointer">↓显示全部衣服↓</a>
+							</div><!-- fliter_option -->
+						</div>
+						<div class="fliter_form_div_right">
+							<fieldset>
+								<legend>高级选项</legend>
+									<div class="checkbox"><label><input type="checkbox" class="fliter" value="sortbyscore" /> 按分数和id排序</label></div>
+									<div class="checkbox"><label><input type="checkbox" class="fliter" value="balance" /> 均衡权重</label></div>
+									<div class="checkbox"><label><input type="checkbox" class="fliter" value="highscore" /> 高分权重</label></div>
+									<div class="checkbox"><label><input type="checkbox" class="fliter" value="acc9" /> 9件饰品</label></div>
+									<div class="checkbox"><label><input type="checkbox" class="fliter" value="toulan" /> 偷懒模式(测试3)</label></div>
+							</fieldset>
+							<fieldset>
+								<legend>筛选(先点击显示全部衣服)</legend>
+									<button  type="button" class="btn btn-xs btn-info front_filter_option" >全部</button>
+									<button  type="button" class="btn btn-xs btn-default front_filter_option" >尚缺材料</button>
+									<button  type="button" class="btn btn-xs btn-default front_filter_option" >暂不缺材料</button>
+									<button  type="button" class="btn btn-xs btn-default front_filter_option" >少女级</button>
+									<button  type="button" class="btn btn-xs btn-default front_filter_option" >少女染/进</button>
+									<button  type="button" class="btn btn-xs btn-default front_filter_option" >公主级</button>
+									<button  type="button" class="btn btn-xs btn-default front_filter_option" >公主染/进</button>
+									<button  type="button" class="btn btn-xs btn-default front_filter_option" >店</button>
+									<button  type="button" class="btn btn-xs btn-default front_filter_option" >店染/进</button>
+									<button  type="button" class="btn btn-xs btn-default front_filter_option" >设计图</button>
+									<button  type="button" class="btn btn-xs btn-default front_filter_option" >设计图染/进</button>
+									<button  type="button" class="btn btn-xs btn-default front_filter_option" >活动</button>
+									<button  type="button" class="btn btn-xs btn-default front_filter_option" >赠送/签到</button>
+									<button  type="button" class="btn btn-xs btn-default front_filter_option" >迷之屋限定</button>
+									<button  type="button" class="btn btn-xs btn-default front_filter_option" >迷之屋限定染/进</button>
+									<button  type="button" class="btn btn-xs btn-default front_filter_option" >3星</button>
+									<button  type="button" class="btn btn-xs btn-default front_filter_option" >4星</button>
+									<button  type="button" class="btn btn-xs btn-default front_filter_option" >5星</button>
+									<button  type="button" class="btn btn-xs btn-default front_filter_option" >套装部件</button>
+									<button  type="button" class="btn btn-xs btn-default front_filter_option" >新品</button>
+									<button  type="button" class="btn btn-xs btn-success" id="add_all">添加所有显示的衣服到衣柜</button>
+							</fieldset>
+						</div>
+					</form>
+				</div><!-- fliter_form_div -->
+			</div><!-- fliter -->
+		</div><!-- top -->
+		<hr>
+		<div id = 'searchResult'>
+			<input type="text" id="searchResultInput" class="btn-sm" placeholder="输入名字搜索" /><button class="btn btn-default btn-sm" onclick="searchResult()">搜索</button><button class="btn btn-default btn-sm" id="searchResultMode">→衣柜</button>
+			<div id='searchResultList' width="100%"></div>
+		<hr>
+		</div>
+		<div id = 'shoppingCartContainer'>
+		  推荐穿戴部件  <button class="btn btn-default" style="float:right" onclick="clearShoppingCart()">清空</button>
+		  <div id='shoppingCart' class="table"></div>
+		</div>
+		<hr>
+		<div id = 'category_container'></div>
+		<div id = "clothes" class="table"></div>
+		<div class = "showmore" id= "showmore" isshowmore="1">↓显示全部衣服↓</div>
+		<div id = "end"></div>
+		<hr>
+		导入批量衣服，请先选择要导入的类别，然后在文本框内输入编号，用空格、逗号或者换行隔开。不知道编号在哪儿的请点<a href="http://tieba.baidu.com/p/3808711082" target="_blank">这里</a>
+		<div id = "import">
+		  <select id="importCate" onChange="clearImport()" ></select><br/>
+		  <textarea id="importData" rows=5 style="width:60%" ></textarea>
+		  <button onClick="doImport()">导入</button>
+		</div>
+		<hr>
+		<p>我拥有的服装 （复制衣橱文本框内容以备份衣橱）</p>
+		<textarea id="myClothes" rows=10 style="width:60%"></textarea><br/>
+		<p style="width:60%; display:none">衣柜数量记录 （复制衣橱文本框内容以备份衣橱）</p>
+		<textarea id="myClothesNum" rows=10 style="width:60%; display:none"></textarea>
+		<br/>
+		<button onClick="loadCustomInventory()">恢复备份</button>
+		<br/>
+		<hr>
+		
+
+	</body>
+</html>
